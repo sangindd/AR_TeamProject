@@ -23,6 +23,10 @@ public class TouchHandler : MonoBehaviour
                         .objectname, clickedObject.GetComponent<Objects>().objectExp);
                     clickedObject.GetComponent<Objects>().Interaction();
                 }
+                else if(EventSystem.current.IsPointerOverGameObject())
+                {
+                    UIManager.instance.uIObjectWindow.ToggleUI(true);
+                }
                 else
                 {
                     UIManager.instance.uIObjectWindow.ToggleUI(false);

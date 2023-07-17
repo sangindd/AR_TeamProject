@@ -23,7 +23,7 @@ public class TextUI : MonoBehaviour
         nameText.text = name;
         expTexts = exp;
 
-        if (expTexts.Length > 1)
+        if (expTexts.Length > 1) //문장이 여러개면 다음버튼 보이게
         {
             NextBtnSet(true);
             expText.text = expTexts[textCnt];
@@ -39,12 +39,12 @@ public class TextUI : MonoBehaviour
         expText.text = text;
     }
 
-    public void NextBtnSet(bool set)
+    public void NextBtnSet(bool set) //텍스트배열의 마지막이면 버튼을 가린다.
     {
         nextBtn.SetActive(set);
     }
 
-    public void BtnTextEvent()
+    public void BtnTextEvent() //버튼클릭시 호출
     {
         SetTextExp(expTexts[++textCnt]);
         if (expTexts.Length - 1 == textCnt)
@@ -53,8 +53,4 @@ public class TextUI : MonoBehaviour
         }
     }
 
-    //IEnumerator TextChangeWait()
-    //{
-
-    //}
 }
