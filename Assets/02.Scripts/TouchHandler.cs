@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TouchHandler : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class TouchHandler : MonoBehaviour
                 }
                 else
                 {
-                    //UIManager.instance.uIObjectWindow.ToggleUI(false);
+                    UIManager.instance.uIObjectWindow.ToggleUI(false);
                 }
             }
         }
