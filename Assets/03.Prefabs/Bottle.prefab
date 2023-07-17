@@ -288,12 +288,12 @@ GameObject:
   - component: {fileID: 7961962770413981588}
   - component: {fileID: 7961962770413981590}
   - component: {fileID: 7961962770413981589}
-  - component: {fileID: 1935352416584627679}
   - component: {fileID: 9111483986861313458}
   - component: {fileID: 8961936807534303359}
+  - component: {fileID: 1059834114911580097}
   m_Layer: 0
   m_Name: Bottle
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -367,20 +367,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1935352416584627679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7292808117586842926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4107df0ea14c71a4ca0efa60006090d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brokenBottlePrefab: {fileID: 9127186685924032221, guid: 344f2b6ade7a1c94f841578f818617ee,
-    type: 3}
 --- !u!114 &9111483986861313458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,6 +406,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.24030203, y: 0.7876623, z: 0.33795288}
   m_Center: {x: 0.0035696924, y: 0.40956596, z: 0.013232216}
+--- !u!114 &1059834114911580097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7292808117586842926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8bb8c8a76b67a54b8eb03467e63644d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8524016395573928493
 PrefabInstance:
   m_ObjectHideFlags: 0

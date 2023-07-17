@@ -20,10 +20,10 @@ public class TouchHandler : MonoBehaviour
                 {
                     UIManager.instance.uIObjectWindow.ToggleUI(true);
                     EventHandler.RaiseTextChangeEvent(clickedObject.GetComponent<Objects>()
-                        .objectname, clickedObject.GetComponent<Objects>().objectExp);
+                        .objectname, clickedObject.GetComponent<Objects>().objectExp, clickedObject);
                     clickedObject.GetComponent<Objects>().Interaction();
                 }
-                else if(EventSystem.current.IsPointerOverGameObject())
+                else if (EventSystem.current.IsPointerOverGameObject())
                 {
                     UIManager.instance.uIObjectWindow.ToggleUI(true);
                 }

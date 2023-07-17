@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Objects : MonoBehaviour
 {
-    public enum Type { Object, Key };
+    public enum Type { Object, Key , Item};
     public Type objectType;
 
     public string objectname; //¿Ã∏ß

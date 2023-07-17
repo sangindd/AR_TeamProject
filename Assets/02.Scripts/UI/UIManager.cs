@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public TextUI textUI;
     public UIObjectWindow uIObjectWindow;
     public Quest quest;
+    public ButtonEvent buttonEvent;
 
     private void Awake()
     {

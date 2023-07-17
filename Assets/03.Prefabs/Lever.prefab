@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 1555224431496639149}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7263247025040460033
 MonoBehaviour:
@@ -49,7 +49,8 @@ MonoBehaviour:
   objectType: 0
   objectname: "\uB808\uBC84"
   objectExp:
-  - "\uB808\uBC84\uC5D0\uC694."
+  - "\uB808\uBC84\uB2E4."
+  - "\uC190\uC7A1\uC774\uAC00 \uBE44\uC5B4\uC788\uB2E4."
   interaction: 0
 --- !u!136 &1705502379381262062
 CapsuleCollider:
