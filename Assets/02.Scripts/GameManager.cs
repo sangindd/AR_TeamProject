@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public TouchHandler touchHandler;
     public BottleEvent bottleEvent;
 
+
     private void Awake()
     {
         if (instance == null)
@@ -20,4 +21,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    
 }
