@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
-    public bool stepOneCheck; //집게를 먹었나
+    public static Quest instance;
+
+    public bool stepOneCheck; //병을 클릭했나?
     public bool stepTwoCheck; //망치를 획득했나?
-    public bool stepThreeCheck; //손잡이를 레버에 꽂았나
-    public bool stepFourCheck; //열쇠를 찾았나
-    public bool EndStep; //모든 조건을 만족했나
+    public bool stepThreeCheck; //병을 깨뜨렸나?
+    public bool stepFourCheck; //레버손잡이를 먹었나?
+    public bool stepFiveCheck; //레버를 완성했나?
+    public bool EndCheck;//열린 상자에서 열쇠를 먹었나?
 
-    void Start()
+    private void Awake()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

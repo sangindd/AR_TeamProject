@@ -15,6 +15,8 @@ public class TextUI : MonoBehaviour
 
     public int textCnt = 0;
 
+
+
     void Start()
     {
         EventHandler.OnTextChange += TouchHandler_OnTextChange;
@@ -22,11 +24,13 @@ public class TextUI : MonoBehaviour
 
     private void TouchHandler_OnTextChange(string name, string[] exp, GameObject obj)
     {
+        if (obj.GetComponent<Objects>().ignore)
+            return;
+
         textCnt = 0;
         nameText.text = name;
         expTexts = exp;
         objectInfo = obj;
-
         UpdateExpText();
         UpdateDestroyButton();
         UpdateGetButton();
@@ -34,7 +38,7 @@ public class TextUI : MonoBehaviour
 
     private void UpdateExpText()
     {
-        if (expTexts.Length > 1)
+        if (expTexts.Length > 1 && !Quest.instance.stepFourCheck)
         {
             NextBtnSet(true);
             expText.text = expTexts[textCnt];
@@ -62,7 +66,10 @@ public class TextUI : MonoBehaviour
     {
         if (objectInfo.GetComponent<Objects>().objectType == Objects.Type.Item)
         {
-            getBtn.SetActive(true);
+            if (objectInfo.GetComponent<Hammer>() && Quest.instance.stepOneCheck)
+                getBtn.SetActive(true);
+            if (objectInfo.GetComponent<LeverHandle>() && Quest.instance.stepThreeCheck)
+                getBtn.SetActive(true);
         }
         else
         {

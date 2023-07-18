@@ -28,4 +28,15 @@ public class GetItem : MonoBehaviour
         }
         return false;
     }
+    public bool ItemLeverHandleCheck() //아이템중에 레버손잡이가 있는지 확인
+    {
+        foreach (var item in items)
+        {
+            if (item.GetComponent<LeverHandle>() != null)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

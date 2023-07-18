@@ -26,4 +26,14 @@ public class EventHandler : MonoBehaviour
             OnItemPickedUp(item);
         }
     }
+    //뭔가에 상호작용할때
+    public delegate void OnObjectInteractionHandler(string type);
+    public static event OnObjectInteractionHandler OnObjectInteraction;
+    public static void HandleObjectInteraction(string type)
+    {
+        if (OnObjectInteraction != null)
+        {
+            OnObjectInteraction(type);
+        }
+    }
 }
